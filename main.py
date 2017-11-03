@@ -78,6 +78,19 @@ class Student(object):
 
     def get_credit(self):
         return self.credit
+
+    def update_id(self, id):
+        self.sid = id
+
+    def update_gpa(self, gpa):
+        self.gpa = gpa
+
+    def update_age(self, age):
+        self.age = age
+
+    def update_credit(self, credit):
+        self.credit = credit
+      
     def __str__(self):
        info = ("Student ID: %s\tCumulative GPA: %s\tAge: %s\tTotal Course Credits: %s" % (self.sid, self.gpa, self.age, self.credit))
        return info
