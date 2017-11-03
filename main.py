@@ -23,7 +23,7 @@ def partition(alist,first,last):
            leftmark = leftmark + 1
 
        while ((alist[rightmark].get_id() >= pivotvalue.get_id()) and (rightmark >= leftmark)):
-           rightmark = rightmark -1
+           rightmark = rightmark -1 
 
        if rightmark < leftmark:
            done = True
@@ -40,20 +40,21 @@ def partition(alist,first,last):
    return rightmark
 
 def binarySearch(aList, sid):
-    start=0
-    end= len(aList)-1
-    done=False
-    count=0
-    while not done and start<=end:
-        mid=(start+end)//2
-        count+=1
+    start = 0
+    end = len(aList)-1
+    done = False
+    count = 0
+    
+    while not done and start <= end:
+        mid = (start+end) // 2
+        count +=1
         if (sid > aList[mid].get_id()):
-            start=mid+1
+            start = mid+1
         elif (sid < aList[mid].get_id()):
-            end=mid-1
+            end = mid-1
         else:
-            done=True
-    if done==True:
+            done = True
+    if done == True:
         return aList[mid].__str__()
     else:
         return "Not found."
@@ -99,15 +100,13 @@ def main():
         student = Student(word[0],word[1],word[2],word[3])
 
         aList.append(student)
-    #print(aList[1])
-    quickSort(aList)
-    #print(aList[1])
 
-    print(binarySearch(aList,"74261880"))
-    print(binarySearch(aList,"47355068"))
-    print(binarySearch(aList,"57518851"))
-    print(binarySearch(aList,"85055902"))
-    print(binarySearch(aList,"67183075"))
+    quickSort(aList)
+
+    students_ids= ["74261880", "47355068", "57518851", "85055902", "67183075"]
+
+    for id in students_ids:
+       print(binarySearch(aList, id))
 
     
 
