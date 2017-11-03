@@ -92,7 +92,7 @@ class Student(object):
         self.credit = credit
       
     def __str__(self):
-       info = ("Student ID: %s\tCumulative GPA: %s\tAge: %s\tTotal Course Credits: %s" % (self.sid, self.gpa, self.age, self.credit))
+       info = ("+ Student ID: %s\tCumulative GPA: %s\tAge: %s\t Total Courses Credits: %s" % (self.sid, self.gpa, self.age, self.credit))
        return info
 
     
@@ -116,7 +116,7 @@ def main():
 
     quickSort(aList)
 
-    students_ids= ["74261880", "47355068", "57518851", "85055902", "67183075"]
+    students_ids = ["74261880", "47355068", "57518851", "85055902", "67183075"]
 
     for id in students_ids:
        print(binarySearch(aList, id))
