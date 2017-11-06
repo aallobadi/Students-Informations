@@ -36,7 +36,6 @@ def partition(alist,first,last):
    alist[first] = alist[rightmark]
    alist[rightmark] = temp
 
-
    return rightmark
 
 def binarySearch(aList, sid):
@@ -124,9 +123,3 @@ def main():
     
 
 main()
-
-        
-
-    
-
-        
